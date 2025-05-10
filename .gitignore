@@ -1,0 +1,32 @@
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Conda environment files
+*.conda
+*.env
+*.yaml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment directories
+env/
+.mamba/
+
+# Ignore cursor files
+*.cursor
+
+# Ignore all files in the data directory
+data/*
