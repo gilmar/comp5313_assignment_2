@@ -30,4 +30,4 @@ env/
 *.cursor
 
 # Ignore all files in the data directory
-data/*
+data/raw/*
