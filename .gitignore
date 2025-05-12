@@ -25,7 +25,8 @@ Thumbs.db
 env/
 .mamba/
 
-# Ignore cursor files
+# Ignore IDE files
+.vscode/
 *.cursor
 
 # Ignore all files in the data directory
