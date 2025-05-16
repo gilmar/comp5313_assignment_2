@@ -17,7 +17,7 @@ COPY (
                 'envoyproxy/envoy',
                 'goharbor/harbor',
                 'home-assistant/core',
-                'godot/godot'
+                'godotengine/godot'
             )
     ),
 

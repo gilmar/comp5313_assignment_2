@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-    echo "Usage: $0 <year>"
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <year> [input_dir] [output_dir]"
     exit 1
 fi
 
 YEAR=$1
-INPUT_DIR=~/gharchive
-OUTPUT_DIR=~/gharchive
+INPUT_DIR=${2:-~/gharchive}
+OUTPUT_DIR=${3:-~/gharchive}
 
 for MONTH in $(seq -w 1 12); do
     INPUT_FILE="${INPUT_DIR}/${YEAR}-${MONTH}-*.json.gz"
