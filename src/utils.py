@@ -265,11 +265,21 @@ def create_graphs_by_date(
     
     return graphs_by_date
 
-def count_supernodes_by_degree(G: nx.Graph) -> int:
+def count_supernodes_by_degree(graph: nx.Graph) -> int:
+    """
+    Count the number of supernodes in a graph based on node degree.
+    
+    Args:
+        graph (nx.Graph): The graph to analyze.
+        
+    Returns:
+        int: The number of supernodes (nodes with degree greater than mean + 2*std).
+    """
     df = pl.DataFrame(
-        [(n, d) for n, d in G.degree()],
+        list(graph.degree()),
         schema=[("node", pl.Utf8), ("degree", pl.Int64)],
-        strict=False
+        strict=False,
+        orient="row"
     )
     stats = df.select([
         pl.col("degree").mean().alias("mean"),
